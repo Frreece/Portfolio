@@ -2,26 +2,227 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: Robot;
+  src: url("./Mr_Robot/MR\ _ROBOT.ttf") format("truetype");
+ }
+
+.Robot{
+  font-family: Robot;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.background-glow{
+  box-shadow: 0 0 50px 25px rgba(57, 75, 209, 0.7);
+  transform: translate(-50%, -50%);
+  transition: box-shadow 0.3s ease;
+}
+
+.no-cursor {
+  cursor: none;
+}
+
+.cursor {
+  cursor: default;
+}
+
+.nav-item {
+
+  overflow: hidden;
+}
+
+.nav-item::after, .nav-item::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  border-radius: inherit;
+  background: radial-gradient(
+    800px circle at var(--x-px) var(--y-px),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+}
+
+.section-transition {
+  background:linear-gradient(to bottom , #000000, rgb(92, 92, 92))
+}
+
+.typing-demo {
+  width: 12ch;
+  animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+  border-right: 3px solid;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2em;
+}
+
+.typing-demo1 {
+  width: 9ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 2em;
+  
+}
+
+.typing-demo2 {
+  width: 9ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.typing-demo3 {
+  width: 7ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 2em;
+  
+}
+
+.typing-demo4 {
+  width: 11ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.stuckBar {
+  float: right;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
+
+
+
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+.tag-list {
+  width: 30rem;
+  max-width: 90vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.loop-slider .inner {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  
+  font-size: 0.9rem;
+  
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+}
+
+.tag span {
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.fade {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.section-transition2 {
+  background: rgb(92, 92, 92)
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  
+}
+
+.card {
+  width: 100%;
+  height: 450px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  overflow-x: none;
+}
+
+.techUsed {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  color: #202020;
+  text-shadow: 
+  0px 0px 1px #111, 
+  0px 0px 1px #363636;
+}
+
+

@@ -1,0 +1,73 @@
+'use client';
+import { useState, useEffect } from "react";
+
+const Landing = () => {
+
+    function useMouse() {
+        const [mousePosition, setMousePosition] = useState({
+            x: -100,
+            y: -100
+        });
+
+        useEffect(() => {
+            function handle(e) {
+                setMousePosition({
+                    x: e.pageX,
+                    y: e.pageY
+                });
+            }
+            document.addEventListener("mousemove", handle);
+            return () => document.removeEventListener("mousemove", handle);
+        })
+
+        return(mousePosition);
+    }
+    
+    const {x, y} = useMouse();
+
+    let xPos = x + 'px';
+    let yPos = y + 'px';
+
+    const handleAnimationEnd = () => {
+        const secondHeading = document.getElementById('second-heading');
+        const thirdHeading = document.getElementById('third-heading')
+        const fourthHeading = document.getElementById('fourth-heading')
+        secondHeading?.classList.add('animate-wiggle1');
+        secondHeading?.classList.remove('invisible');
+        thirdHeading?.classList.add('animate-wiggle1');
+        thirdHeading?.classList.remove('invisible');
+      };
+
+      useEffect(() => {
+        const secondHeading = document.getElementById('second-heading');
+        secondHeading?.classList.add('invisible');
+      }, []);
+
+      const handleScrollToComponent = (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById('About');
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      };
+
+    return (
+        <div
+        className="h-screen w-screen flex justify-center items-center no-cursor bg-black  ">   
+            <div className="">
+                <h1 className=" text-red-900 lg:text-8xl md:text-8xl sm:text-6xl Iphone:text-4xl Robot self-center justify-self-center text-center typing-demo" onAnimationEnd={handleAnimationEnd}>
+                Hello Friend
+                </h1>
+                <h1 id="second-heading" className="text-white lg:text-6xl md:text-6xl sm:text-4xl justify-self-center text-center invisible md:whitespace-normal"> Welcome to my Portfolio</h1>
+            </div>
+
+            <div style={{
+                position: 'absolute',
+                top: yPos,
+                left: xPos,
+            }} className="background-glow" >
+           </div>
+        </div>
+    
+     );
+}
+ 
+export default Landing;
