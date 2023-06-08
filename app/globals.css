@@ -56,6 +56,11 @@ body {
   );
 }
 
+.nav-item:hover {
+  text-decoration: underline;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+
 .section-transition {
   background:linear-gradient(to bottom , #000000, rgb(92, 92, 92))
 }
@@ -120,6 +125,7 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
+  z-index: 100;
 }
 
 
@@ -223,6 +229,7 @@ body {
   text-shadow: 
   0px 0px 1px #111, 
   0px 0px 1px #363636;
+  cursor: pointer;
 }
 
 
