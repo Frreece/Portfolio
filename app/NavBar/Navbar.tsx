@@ -4,19 +4,19 @@ import React, { useRef } from "react";
 const Navbar = () => {
   const componentRef = useRef(null);
 
-  const handleScrollToAbout = (e) => {
+  const handleScrollToAbout = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    const targetElement = document.getElementById('About');
+    const targetElement = document.getElementById('About')!;
     targetElement.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleScrollToProjects = (e) => {
+  const handleScrollToProjects = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    const targetElement = document.getElementById('Projects');
+    const targetElement = document.getElementById('Projects')!;
     targetElement.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleContacts = (e) => {
+  const handleContacts = (e: any) => {
     
   }
 

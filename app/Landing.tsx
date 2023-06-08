@@ -10,7 +10,7 @@ const Landing = () => {
         });
 
         useEffect(() => {
-            function handle(e) {
+            function handle(e: { pageX: any; pageY: any; }) {
                 setMousePosition({
                     x: e.pageX,
                     y: e.pageY
@@ -43,9 +43,9 @@ const Landing = () => {
         secondHeading?.classList.add('invisible');
       }, []);
 
-      const handleScrollToComponent = (e) => {
+      const handleScrollToComponent = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        const targetElement = document.getElementById('About');
+        const targetElement = document.getElementById('About')!;
         targetElement.scrollIntoView({ behavior: 'smooth' });
       };
 

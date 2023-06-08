@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 const TAGS = ['HTML', 'CSS', 'JavaScript', 'Typescript', 'Tailwind', 'React', 'Next.js', 'Python', 'UI/UX', 'Pandas', 'Spyder', 'webdev'];
 const DURATION = 15000;
 const ROWS = 3;
 const TAGS_PER_ROW = 4;
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+const random = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min;
+const shuffle = (arr: string[]) => [...arr].sort(() => 0.5 - Math.random());
 
-const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
+const InfiniteLoopSlider = ({ children, duration, reverse = false }: {children:ReactNode, duration:number, reverse:boolean}) => {
   return (
     <div className='loop-slider' style={{
       '--duration': `${duration}ms`,
@@ -22,7 +22,7 @@ const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
   );
 };
 
-const Tag = ({ text }) => (
+const Tag = ({ text } : {text:string}) => (
   <div className='tag'><span>#</span> {text}</div>
 );
 
