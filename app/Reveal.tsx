@@ -22,7 +22,7 @@ export const Reveal = ({children, width = "100%"}: Props) => {
         } else {
             mainControls.set("hidden");
         }
-    }, [isInView]);
+    }, [isInView, mainControls]);
 
 
 
