@@ -32,7 +32,7 @@ const About = () => {
         <App />
         
         <p className="mb-4">
-        Outside of work, I'm interested in studying Philosophy. I also like to watch and analyze TV shows, anime, books, and more. I also like to play games and dance.
+        Outside of work, I&apos;m interested in studying Philosophy. I also like to watch and analyze TV shows, anime, books, and more. I also like to play games and dance.
         </p>
         
         
