@@ -53,7 +53,7 @@ const Landing = () => {
     return (
         <div
         className="h-screen w-screen flex justify-center items-center no-cursor bg-black  ">
-            <div className="cursor shadow-lg absolute top-5 left-5 hidden sm:block md:hidden lg:hidden">
+            <div className="cursor shadow-lg absolute top-5 left-5  Iphone:block sm:block md:hidden lg:hidden">
                 <MobileNav/>
             </div>   
             <div className="">
