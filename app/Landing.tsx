@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
+import MobileNav from "./MovileNav";
 
 const Landing = () => {
 
@@ -51,7 +52,10 @@ const Landing = () => {
 
     return (
         <div
-        className="h-screen w-screen flex justify-center items-center no-cursor bg-black  ">   
+        className="h-screen w-screen flex justify-center items-center no-cursor bg-black  ">
+            <div className="cursor shadow-lg absolute top-5 left-5 hidden sm:block md:hidden lg:hidden">
+                <MobileNav/>
+            </div>   
             <div className="">
                 <h1 className=" text-red-900 lg:text-8xl md:text-8xl sm:text-6xl Iphone:text-4xl Robot self-center justify-self-center text-center typing-demo" onAnimationEnd={handleAnimationEnd}>
                 Hello Friend

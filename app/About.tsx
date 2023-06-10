@@ -28,7 +28,7 @@ const About = () => {
         <App />
         
         <p className="mb-4">
-        When I&apos;m not coding, I dive into the captivating world of philosophy, exploring its profound concepts and ideas. Additionally, I have a strong interest in storytelling, whether it&apos;s analyzing TV shows, books, or anime. In my leisure time, I enjoy immersing myself in the realm of gaming and having fun by listening to music.
+        When I&apos;m not coding, I dive into the captivating world of philosophy, exploring its valuable concepts and ideas. Additionally, I have a strong interest in storytelling, whether it&apos;s analyzing TV shows, books, or anime. In my leisure time, I enjoy immersing myself in the realm of gaming and having fun by listening to music.
         </p>
         
         

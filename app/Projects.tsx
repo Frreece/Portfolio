@@ -30,12 +30,12 @@ const Projects = () => {
             </div>
             
             <div className="card hover:scale-105">
-            <a href="https://github.com/Frreece/2048"> <span><Image width={48} height={48} src="iconmonstr-github-1.svg" alt="" className="cursor-pointer github " /> </span> <span className="float-right translate-y-[-30px] text-white"> Complete </span> </a>
+            <a href="https://github.com/Frreece/Calculators"> <span><Image width={48} height={48} src="iconmonstr-github-1.svg" alt="" className="cursor-pointer github " /> </span> <span className="float-right translate-y-[-30px] text-white"> Complete </span> </a>
                 <h2 className="text-red-900 text-4xl mb-5 projectName">
                     <br />
-                    <a href="" className="hover:underline">Calculator</a> 
+                    <a href="https://github.com/Frreece/Calculators" className="hover:underline">Calculator</a> 
                 </h2>
-                <p> I developed a versatile grade calculator for dynamically calculating grades.
+                <p> I developed a versatile grade calculator website for dynamically calculating school grades.
 
                 </p>
                 <p className="text-s techUsed shadow-xl"> <span className="">Tech Used: <br/> </span> Html, CSS, Javascript </p>
