@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
-import MobileNav from "./MovileNav";
+import MobileNav from "./MobileNav";
 
 const Landing = () => {
 
