@@ -19,7 +19,7 @@ body {
     height: 100%;
     width: 100%;
 }
-
+/* Curser Glow style located in Landing.tsx*/
 .background-glow{
   box-shadow: 0 0 50px 25px rgba(57, 75, 209, 0.7);
   transform: translate(-50%, -50%);
@@ -123,7 +123,7 @@ body {
 }
 
 
-
+/* Located in About.tsx */
 
 .app {
   display: flex;
@@ -160,7 +160,7 @@ body {
   animation-direction: var(--direction);
   animation-duration: var(--duration);
 }
-
+/* Located in Technologies.tsx */
 .tag {
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@ body {
     transform: translateX(-50%);
   }
 }
-
+/* Items located in Projects*/
 .section-transition2 {
   background: rgb(92, 92, 92)
 }
@@ -206,13 +206,13 @@ body {
 
 .card {
   width: 100%;
-  height: 450px;
+  height: 350px;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
   position: relative;
   overflow-x: none;
-  background: linear-gradient(to top right, grey, black);
+  background-color: teal;
 }
 
 
@@ -221,7 +221,7 @@ body {
   right: 0;
   left: 0;
   position: absolute;
-  color: #202020;
+  color: #cdcdcd;
   text-shadow: 
   0px 0px 1px #363636;
 }
@@ -251,6 +251,9 @@ body {
   transform: scale(1.25);
   pointer-events: all;
 }
+
+
+/* Located in MovileNav.tsx */
  
  #menuToggle
  {
